@@ -36,7 +36,7 @@ public class App
 		File src= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		try { 
 		 // now copy the  screenshot to desired location using copyFile //method
-		FileUtils.copyFile(src, new File("C:\\Users\\vmuthuveeran\\Downloads\\screen1.png"));
+		FileUtils.copyFile(src, new File("C:\\Users\\vmuthuveeran\\Downloads\\screen12.png"));
 		}
 		 
 		catch (IOException e)
