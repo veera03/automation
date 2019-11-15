@@ -1,6 +1,7 @@
 package login;
 
 import java.io.File;
+import login.*;
 import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
@@ -18,6 +19,11 @@ public class App
 {
     public static void main( String[] args )
     {
+    	
+    	config cfg = new config();
+    	String caseworker = cfg.getProperty("caseworker");
+    	System.out.println(caseworker);
+    	
 	    System.setProperty("webdriver.chrome.driver", "C:\\Users\\vmuthuveeran\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");  
 	    WebDriver driver=new ChromeDriver();  
 
@@ -36,7 +42,7 @@ public class App
 		File src= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		try { 
 		 // now copy the  screenshot to desired location using copyFile //method
-		FileUtils.copyFile(src, new File("C:\\Users\\vmuthuveeran\\Downloads\\screen1.png"));
+		FileUtils.copyFile(src, new File("C:\\Users\\vmuthuveeran\\git\\repository\\test\\screenshot\\login1.png"));
 		}
 		 
 		catch (IOException e)
